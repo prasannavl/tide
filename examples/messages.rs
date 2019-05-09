@@ -39,11 +39,13 @@ impl Database {
     }
 }
 
+#[allow(unused_mut)] // Workaround clippy bug
 async fn new_message(mut cx: Context<Database>) -> EndpointResult<String> {
     let msg = await!(cx.body_json()).client_err()?;
     Ok(cx.state().insert(msg).to_string())
 }
 
+#[allow(unused_mut)] // Workaround clippy bug
 async fn set_message(mut cx: Context<Database>) -> EndpointResult<()> {
     let msg = await!(cx.body_json()).client_err()?;
     let id = cx.param("id").client_err()?;
