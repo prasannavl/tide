@@ -1,12 +1,12 @@
 #![feature(async_await)]
 #![allow(unused)]
 
+mod body_types;
+mod catch_all;
+mod cookies;
+mod default_headers;
+mod graphql;
 mod hello;
 mod messages;
-mod staticfile;
-mod default_headers;
-mod cookies;
-mod catch_all;
-mod body_types;
 mod multipart_form;
-mod graphql;
+mod staticfile;
