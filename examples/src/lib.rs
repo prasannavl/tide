@@ -1,5 +1,6 @@
 #![feature(async_await)]
 #![allow(unused)]
+#![warn(clippy::all)]
 
 mod body_types;
 mod catch_all;
