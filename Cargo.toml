@@ -1,7 +1,7 @@
 [workspace]
 members = [
     "tide",
-    "examples"
+    "examples",
 ]
 
 [patch.crates-io]
