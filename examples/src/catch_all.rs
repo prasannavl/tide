@@ -1,6 +1,6 @@
 use tide::Context;
 
-pub async fn echo_path(cx: Context<()>) -> String {
+async fn echo_path(cx: Context<()>) -> String {
     let path: String = cx.param("path").unwrap();
     format!("Your path is: {}", path)
 }

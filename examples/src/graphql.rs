@@ -56,7 +56,7 @@ async fn handle_graphql(mut cx: Context<Data>) -> EndpointResult {
     Ok(resp)
 }
 
-fn main() {
+pub fn main() {
     let mut app = App::with_state(Data::default());
     app.at("/graphql").post(handle_graphql);
     app.serve("127.0.0.1:8000").unwrap();
